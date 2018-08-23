@@ -1,0 +1,7 @@
+C:\Users\alumno\Desktop\Nicolas Mazzocon\ClaseProgramacionII\Ejercicio4\Ejercicio4\bin\Debug\Ejercicio4.exe.config
+C:\Users\alumno\Desktop\Nicolas Mazzocon\ClaseProgramacionII\Ejercicio4\Ejercicio4\bin\Debug\Ejercicio4.exe
+C:\Users\alumno\Desktop\Nicolas Mazzocon\ClaseProgramacionII\Ejercicio4\Ejercicio4\bin\Debug\Ejercicio4.pdb
+C:\Users\alumno\Desktop\Nicolas Mazzocon\ClaseProgramacionII\Ejercicio4\Ejercicio4\obj\Debug\Ejercicio4.csprojAssemblyReference.cache
+C:\Users\alumno\Desktop\Nicolas Mazzocon\ClaseProgramacionII\Ejercicio4\Ejercicio4\obj\Debug\Ejercicio4.csproj.CoreCompileInputs.cache
+C:\Users\alumno\Desktop\Nicolas Mazzocon\ClaseProgramacionII\Ejercicio4\Ejercicio4\obj\Debug\Ejercicio4.exe
+C:\Users\alumno\Desktop\Nicolas Mazzocon\ClaseProgramacionII\Ejercicio4\Ejercicio4\obj\Debug\Ejercicio4.pdb
