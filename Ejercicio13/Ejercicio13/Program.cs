@@ -12,13 +12,16 @@ namespace Ejercicio13
     {
       Console.Title = "Ejercicio Nro 13";
       double numero;
+	  string binario;
       string numeroStr;
       numeroStr = Console.ReadLine();
       if(double.TryParse(numeroStr, out numero))
       {
         Console.WriteLine(Conversor.DecimalBinario(numero));
       }
-      Console.ReadKey();
+	  binario = Console.ReadLine();
+			Console.WriteLine(Conversor.BinarioDecimal(binario));	
+	  Console.ReadKey();
     }
   }
 }

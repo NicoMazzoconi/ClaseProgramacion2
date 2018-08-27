@@ -10,19 +10,37 @@ namespace Ejercicio13
   {
     public static string DecimalBinario(double decim)
     {
-      string binario = "1";
-      double resto;
-      while(decim > 1)
+      string binario = "";
+      while(decim > 0)
       {
-        resto = decim % 2;
-        decim = decim / 2;
-        binario = binario + resto;
+        if(decim % 2 == 0)
+		{
+			binario = "0" + binario;
+		}
+		else
+		{
+			binario = "1" + binario;
+		}
+        decim = (int)decim / 2;
       }
       return binario;
     }
     public static double BinarioDecimal(string binario)
     {
-      return 1;
+		char[] charArray = binario.ToCharArray();
+		Array.Reverse(charArray);
+		double decim = 0;
+		int tam = binario.Length;
+		int i;
+		
+		for(i = 0; i < tam; i++)
+		{
+			if(charArray[i] == '1')
+			{
+				decim = decim + Math.Pow(2, i);
+			}
+		}
+		return decim;
     }
 
   }
