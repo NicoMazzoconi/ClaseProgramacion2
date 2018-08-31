@@ -1,0 +1,7 @@
+D:\NicoMazzoconi\ClaseProgramacion2\Ejercicio17\Ejercicio17\bin\Debug\Ejercicio17.exe.config
+D:\NicoMazzoconi\ClaseProgramacion2\Ejercicio17\Ejercicio17\bin\Debug\Ejercicio17.exe
+D:\NicoMazzoconi\ClaseProgramacion2\Ejercicio17\Ejercicio17\bin\Debug\Ejercicio17.pdb
+D:\NicoMazzoconi\ClaseProgramacion2\Ejercicio17\Ejercicio17\obj\Debug\Ejercicio17.csprojAssemblyReference.cache
+D:\NicoMazzoconi\ClaseProgramacion2\Ejercicio17\Ejercicio17\obj\Debug\Ejercicio17.csproj.CoreCompileInputs.cache
+D:\NicoMazzoconi\ClaseProgramacion2\Ejercicio17\Ejercicio17\obj\Debug\Ejercicio17.exe
+D:\NicoMazzoconi\ClaseProgramacion2\Ejercicio17\Ejercicio17\obj\Debug\Ejercicio17.pdb

@@ -27,14 +27,14 @@ namespace Boligrafos
             if (tinta < 0)
             {
                 if (this.tinta - tinta >= 0)
-                    this.tinta = (short)(this.tinta - tinta);
+                    this.tinta = (short)(this.tinta + tinta);
                 else
                     this.tinta = 0;
             }
             else if (tinta > 0)
             {
                 if (this.tinta + tinta <= cantidadTintaMaxima)
-                    this.tinta = (short)(this.tinta + tinta);
+                    this.tinta = (short)(this.tinta - tinta);
                 else
                     this.tinta = 100;
             }
@@ -42,7 +42,7 @@ namespace Boligrafos
 
         public void Recarga()
         {
-            SetTinta(100);
+            this.SetTinta(100);
         }
 
         public void Pintar(int gasto, out string dibujo)
@@ -51,27 +51,46 @@ namespace Boligrafos
             dibujo = "";
             if (gasto >= this.tinta)
             {
-                for (i = 0; i < tinta; i++)
-                    dibujo = dibujo + "*";
-                SetTinta(-100);
+                if (this.tinta > 0)
+                {
+                    for (i = 0; i < tinta; i++)
+                        dibujo = dibujo + "*";
+                    dibujo = dibujo + "(" + i + ")";
+                    short desc = (short)(-this.tinta);
+                    this.SetTinta(desc);
+                }
+                else
+                {
+                    dibujo = dibujo + "(" + 0 + ")";
+                }
             }
-            else
-                for (i = 0; i < gasto; i++)
-                    dibujo = dibujo + "*";
-            SetTinta((short)-i);
+            else if (gasto < this.tinta)
+            {
+                if (tinta > 0)
+                {
+                    for (i = 0; i < gasto; i++)
+                        dibujo = dibujo + "*";
+                    dibujo = dibujo + "(" + i + ")";
+                    short desc = (short)(0 - i);
+                    this.SetTinta(desc);
+                }else
+                {
+                    dibujo = dibujo + "(" + 0 + ")";
+                }
+            }
         }
 
-        public Boligrafo BoligrafoCreate(short tinta, ConsoleColor color)
+        public void BoligrafoCreate(short tinta, ConsoleColor color)
         {
-            Boligrafo boligrafo = new Boligrafo();
+            
             if (tinta > 100)
-                boligrafo.tinta = 100;
+                this.tinta = 100;
             else if (tinta < 0)
-                boligrafo.tinta = 0;
+                this.tinta = 0;
             else
-                boligrafo.tinta = tinta;
-            boligrafo.color = color;
-            return boligrafo;
+                this.tinta = tinta;
+            this.color = color;
+            
         }
     }
 }
