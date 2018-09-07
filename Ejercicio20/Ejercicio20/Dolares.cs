@@ -57,16 +57,15 @@ namespace Billetes
 
         public static bool operator !=(Dolares d, Pesos p)
         {
-            if ((Dolares)p != d)
-                return true;
+            if(!(d is null) || !(p is null))
+                if ((Dolares)p != d)
+                    return true;
             return false;
         }
 
         public static bool operator ==(Dolares e, Pesos p)
         {
-            if (e == (Dolares)p)
-                return true;
-            return false;
+            return !(e != p);
         }
 
         public static bool operator !=(Dolares d, Euros p)

@@ -13,7 +13,8 @@ namespace Ejercicio21
             Fahrenheit f = new Fahrenheit(100);
             Celsius c = (Celsius)f;
             Kelvin k = (Kelvin)f;
-            Console.WriteLine();
+
+            Console.WriteLine(((Fahrenheit)k).GetTemp());
             Console.WriteLine();
             Console.ReadKey();
         }
