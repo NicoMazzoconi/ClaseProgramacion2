@@ -7,7 +7,7 @@ using Billetes;
 
 namespace Billetes
 {
-    class Pesos
+   public class Pesos
     {
         private double Cantidad;
         private static float CotizRespectoDolar;

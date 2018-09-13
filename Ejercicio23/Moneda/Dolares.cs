@@ -38,14 +38,14 @@ namespace Billetes
         public static explicit operator Pesos(Dolares d)
         {
             Pesos p = new Pesos(d.GetCantidad());
-            p = new Pesos(p.GetCantidad() / p.GetCotizacion());
+            p = new Pesos(p.GetCantidad() * p.GetCotizacion());
             return p;
         }
 
         public static explicit operator Euros(Dolares d)
         {
             Euros e = new Euros(d.GetCantidad());
-            e = new Euros(e.GetCantidad() / e.GetCotizacion());
+            e = new Euros(e.GetCantidad() * e.GetCotizacion());
             return e;
         }
 

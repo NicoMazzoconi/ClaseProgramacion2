@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Billetes
 {
-    class Euros
+    public class Euros
     {
         private double Cantidad;
         private static float CotizRespectoDolar;
@@ -45,7 +45,7 @@ namespace Billetes
         {
             Dolares d = (Dolares)e;
             Pesos p = new Pesos(d.GetCantidad());
-            p = new Pesos(p.GetCantidad() / p.GetCotizacion());
+            p = new Pesos(p.GetCantidad() * p.GetCotizacion());
             return p;
         }
 

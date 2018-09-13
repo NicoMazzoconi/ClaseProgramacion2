@@ -37,7 +37,7 @@ namespace Billetes
 
         public static explicit operator Dolares(Euros e)
         {
-            Dolares d = new Dolares(e.Cantidad * CotizRespectoDolar);
+            Dolares d = new Dolares(e.Cantidad / CotizRespectoDolar);
             return d;
         }
 
@@ -45,7 +45,7 @@ namespace Billetes
         {
             Dolares d = (Dolares)e;
             Pesos p = new Pesos(d.GetCantidad());
-            p = new Pesos(p.GetCantidad() / p.GetCotizacion());
+            p = new Pesos(p.GetCantidad() * p.GetCotizacion());
             return p;
         }
 

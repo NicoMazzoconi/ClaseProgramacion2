@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Billetes
 {
-    class Dolares
+    public class Dolares
     {
         private double Cantidad;
         private static float CotizRespectoDolar;
@@ -38,7 +38,7 @@ namespace Billetes
         public static explicit operator Pesos(Dolares d)
         {
             Pesos p = new Pesos(d.GetCantidad());
-            p = new Pesos(p.GetCantidad() / p.GetCotizacion());
+            p = new Pesos(p.GetCantidad() * p.GetCotizacion());
             return p;
         }
 
