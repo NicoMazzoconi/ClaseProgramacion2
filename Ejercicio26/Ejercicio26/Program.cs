@@ -10,17 +10,22 @@ namespace Ejercicio26
     {
         static void Main(string[] args)
         {
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("GENERANDO NUMERO RANDOM");
+            Console.ForegroundColor = ConsoleColor.White;
             int[] numeroEnteros = new int[20];
             for(int i = 0; i < 20; i++)
             {
-                Random rm = new Random(i * DateTime.Now.Millisecond);
-                
+                Random rm = new Random(DateTime.Now.Millisecond);
+                Console.ReadKey();
                 numeroEnteros[i] = rm.Next(-32768, 32767);
                 Console.WriteLine(numeroEnteros[i]);
             }
-
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("NUMEROS POSITIVOS DE MAYOR A MENOR");
+            Console.ForegroundColor = ConsoleColor.White;
             int flagSwap, aux;
             do
             {
@@ -42,23 +47,10 @@ namespace Ejercicio26
                 if (numeroEnteros[i] > 0)
                     Console.WriteLine(numeroEnteros[i]);
             }
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("NUMERO NEGATIVOS DE MENOR A MAYOR");
-            do
-            {
-                flagSwap = 0;
-                for (int i = 0; i < 20 - 1; i++)
-                {
-                    if (numeroEnteros[i] > numeroEnteros[i + 1])
-                    {
-                        aux = numeroEnteros[i];
-                        numeroEnteros[i] = numeroEnteros[i + 1];
-                        numeroEnteros[i + 1] = aux;
-                        flagSwap = 1;
-                    }
-                }
-            } while (flagSwap == 1);
-
-            for (int i = 0; i < 20; i++)
+            Console.ForegroundColor = ConsoleColor.White;
+            for (int i = 19; i > 0; i--)
             {
                 if (numeroEnteros[i] < 0)
                     Console.WriteLine(numeroEnteros[i]);
