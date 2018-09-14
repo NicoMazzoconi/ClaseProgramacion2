@@ -8,5 +8,16 @@ namespace Ejercicio31
 {
     class Negocio
     {
-    }
+		private PuestoAtencion caja;
+		private string nombre;
+		private Queue<Cliente> clientes;
+
+		public Cliente Clientes
+		{
+			get
+			{
+				return this.clientes.First();
+			}
+		}
+	}
 }
