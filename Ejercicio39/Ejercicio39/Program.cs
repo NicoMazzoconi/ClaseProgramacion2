@@ -10,6 +10,10 @@ namespace Ejercicio39
 	{
 		static void Main(string[] args)
 		{
+            SobreSobreescrito newesc = new SobreSobreescrito();
+
+            Console.WriteLine(newesc.MiMetodo());
+            Console.ReadKey();
 		}
 	}
 }

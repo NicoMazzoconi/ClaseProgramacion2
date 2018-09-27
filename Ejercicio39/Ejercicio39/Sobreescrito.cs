@@ -15,9 +15,12 @@ namespace Ejercicio39
 			this.miAtributo = "Probar abstractos";
 		}
 
-		public abstract string MiPropiedad => miAtributo;
+		public abstract string MiPropiedad
+        {
+            get;
+        }
 
-		public abstract string MiMetodo => MiPropiedad;
+		public abstract string MiMetodo();
 
 		public override string ToString()
 		{
