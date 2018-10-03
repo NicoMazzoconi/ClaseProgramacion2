@@ -29,7 +29,21 @@ namespace Central_Telefonica
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Local l1 = new Local("Bernal", 30, "Rosario", 2.65f);
+            Provincial l2 = new Provincial("Morón", Franja.Franja_1, 21, "Bernal");
+            Local l3 = new Local("Lanús", 45, "San Rafael", 1.99f);
+            Provincial l4 = new Provincial(l2, Franja.Franja_3);
+            // Las llamadas se irán registrando en la Centralita.
+            // La centralita mostrará por pantalla todas las llamadas según las vaya registrando.
+            c = c + l4;
+            //  Console.WriteLine(c.Mostrar());
+            c = c + l3;
+            //  Console.WriteLine(c.Mostrar());
+            c = c + l2;
+            //  Console.WriteLine(c.Mostrar());
+            c = c + l1;
+            //Console.WriteLine(c.Mostrar());
+            c.OrdenarLlamadas();
         }
 
         private void button1_Click(object sender, EventArgs e)
