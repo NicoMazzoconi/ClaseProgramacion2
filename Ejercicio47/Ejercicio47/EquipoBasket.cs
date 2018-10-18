@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio47
 {
-    class EquipoBasket  :Equipo
+    public class EquipoBasket  :Equipo
     {
         public EquipoBasket(string nombre, DateTime creacion) : base(nombre, creacion)
         { }

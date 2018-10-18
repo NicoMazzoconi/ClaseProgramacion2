@@ -26,8 +26,14 @@ namespace Ejercicio47
             get
             {
                 Random index1 = new Random();
-
-                return CalcularPartido(listaGenerica[index1.Next(0, (listaGenerica.Count - 1))], listaGenerica[index1.Next(0, (listaGenerica.Count - 1))]);
+				int result1 = index1.Next(0, (listaGenerica.Count - 1));
+				int result2 = index1.Next(0, (listaGenerica.Count - 1));
+				while(result2 == result1)
+				{
+					System.Threading.Thread.Sleep(250);
+					result2 = index1.Next(0, (listaGenerica.Count - 1));
+				}
+                return CalcularPartido(listaGenerica[result1], listaGenerica[result2]);
             }
         }
 
@@ -35,10 +41,9 @@ namespace Ejercicio47
         {
             StringBuilder sb = new StringBuilder();
             Random resultado1 = new Random();
-            Random resultado2 = new Random();
             int c = resultado1.Next(0, 4);
-            System.Threading.Thread.Sleep(500);
-            int d = resultado2.Next(0, 4);
+            System.Threading.Thread.Sleep(250);
+            int d = resultado1.Next(0, 4);
             sb.AppendFormat("{0} {1}-{2} {3}", a.Nombre, c, d, b.Nombre);
             return sb.ToString();
         }
