@@ -53,12 +53,12 @@ namespace Ejercicio46
             try
             {
                 bool a = nueva + autito;
-                bool b = nueva + autito;
+                //  bool b = nueva + autito;
+                bool b = (nueva == autito);
             }
             catch (Exception)
             {
-                if (nueva == autito)
-                    Assert.IsTrue(true);
+                Assert.IsTrue(false);
             }
         }
 
