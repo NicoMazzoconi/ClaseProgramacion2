@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-	public class Contabilidad<T, U> where T : Recibo where U : Factura
+	public class Contabilidad<T, U> where T : Recibo where U : Factura, new()
 	{
 		private List<T> egreso;
 		private List<U> ingreso;
