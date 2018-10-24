@@ -54,7 +54,8 @@ namespace Ejercicio52
 
         bool IAcciones.Recargar(int unidades)
         {
-            throw new NotImplementedException();
+            this.tamañoMina = tamañoMina + unidades;
+            return true;
         }
 
         public override string ToString()

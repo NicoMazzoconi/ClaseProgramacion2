@@ -18,7 +18,7 @@ namespace TestConsola
             Console.ForegroundColor = eLapiz.color;
             Console.WriteLine(eLapiz.texto);
             Console.ForegroundColor = colorOriginal;
-            Console.WriteLine(miLapiz);
+            Console.WriteLine(miLapiz.ToString());
             EscrituraWrapper eBoligrafo = miBoligrafo.Escribir("Hola");
             Console.ForegroundColor = eBoligrafo.color;
             Console.WriteLine(eBoligrafo.texto);
