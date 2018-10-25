@@ -186,7 +186,36 @@ namespace Ejercicio51
             else
             {
                 c.AgregarLlamada(l);
-                return c;
+				StreamWriter sw = null;
+				StreamReader sr = null;
+				string txt = "";
+				try
+				{
+					sr = new StreamReader("log.txt");
+					txt = sr.ReadToEnd();
+				}
+				catch(Exception)
+				{ }
+				finally
+				{
+					if(sr != null)
+						sr.Close();
+				}
+				try
+				{
+					sw = new StreamWriter("log.txt");
+					sw.WriteLine(txt + "\n" + DateTime.Now.DayOfWeek.ToString() + " " + DateTime.Now.Day + " de " + DateTime.Now.Month.ToString() + " de " + DateTime.Now.Year + " " + DateTime.Now.Hour + ":" + DateTime.Now.Minute + "hs- Se realizo una llamada");
+				}
+				catch(Exception ex)
+				{
+					throw new FallaLogException("Error al guardar", ex);
+				}
+				finally
+				{
+					if(sw != null)
+						sw.Close();
+				}
+				return c;
             }
         }
     }

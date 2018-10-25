@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio51
 {
-	public class Local	:Llamada, IGuardar<Local>
+	public class Local	:Llamada
 	{
 		protected float costo;
 
@@ -17,18 +17,6 @@ namespace Ejercicio51
 				return costo;
 			}
 		}
-
-        string IGuardar<Local>.RutaDeArchivo
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
 
         protected override string Mostrar()
 		{
@@ -62,14 +50,5 @@ namespace Ejercicio51
             return Mostrar();
         }
 
-        bool IGuardar<Local>.Guardar()
-        {
-            throw new NotImplementedException();
-        }
-
-        Local IGuardar<Local>.Leer()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

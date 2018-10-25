@@ -12,7 +12,7 @@ namespace Ejercicio51
 		Franja_2,
 		Franja_3
 	}
-	public class Provincial	:Llamada, IGuardar<Provincial>
+	public class Provincial	:Llamada
 	{
 		protected Franja franjaHoraria;
 
@@ -34,17 +34,6 @@ namespace Ejercicio51
 			}
 		}
 
-        string IGuardar<Provincial>.RutaDeArchivo
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
 
         private float CalcularCosto()
 		{
@@ -85,14 +74,5 @@ namespace Ejercicio51
             return Mostrar();
         }
 
-        bool IGuardar<Provincial>.Guardar()
-        {
-            throw new NotImplementedException();
-        }
-
-        Provincial IGuardar<Provincial>.Leer()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

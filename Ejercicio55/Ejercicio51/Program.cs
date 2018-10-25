@@ -10,6 +10,21 @@ namespace Ejercicio51
     {
         static void Main(string[] args)
         {
+			Centralita cen = new Centralita("Nico");
+			Local asd = new Local("Pehua", 12, "asd", 12);
+			Provincial dsa = new Provincial("asdsad", Franja.Franja_1, 231, "asdas");
+
+			try
+			{
+				cen += asd;
+				cen += dsa;
+				cen += asd;
+			}
+			catch(Exception ex)
+			{
+				Console.WriteLine(ex.Message);
+			}
+			Console.ReadKey();
         }
     }
 }
