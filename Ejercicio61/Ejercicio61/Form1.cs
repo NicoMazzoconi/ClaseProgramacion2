@@ -44,6 +44,7 @@ namespace Ejercicio61
             conexion.Guardar(new Persona(textBox1.Text, textBox2.Text));
             textBox1.Text = "";
             textBox2.Text = "";
+            button1_Click(sender, e);
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -59,6 +60,24 @@ namespace Ejercicio61
         private void button5_Click(object sender, EventArgs e)
         {
             conexion.Borrar(seleccionada);
+            button1_Click(sender, e);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            conexion.Modificar(new Persona(seleccionada.ID, textBox1.Text, textBox2.Text));
+            button1_Click(sender, e);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Persona aux = conexion.LeerID(textBox3.Text);
+            if (aux != null)
+            {
+                MessageBox.Show(aux.Nombre + " " + aux.Apellido);
+            }
+            else
+                MessageBox.Show("No encontrado");
         }
     }
 }

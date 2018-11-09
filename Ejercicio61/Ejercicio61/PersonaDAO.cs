@@ -14,7 +14,7 @@ namespace Ejercicio61
         
         public PersonaDAO()
         {
-            conexion = new SqlConnection("Data Source=LAB3PC07\\SQLEXPRESS;Initial Catalog=AdventureWorks2012;Integrated Security=True");
+            conexion = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=Prueba;Integrated Security=True");
             comando = new SqlCommand();
             comando.CommandType = System.Data.CommandType.Text;
             comando.Connection = conexion;
@@ -34,6 +34,20 @@ namespace Ejercicio61
             return lsPersonas;
         }
 
+        public Persona LeerID(string id)
+        {
+            comando.CommandText = "SELECT ID, Nombre, Apellido FROM Persona WHERE ID = " + id;
+            conexion.Open();
+            SqlDataReader oDr = comando.ExecuteReader();
+            if (oDr.Read())
+            {
+                Persona aux = new Persona(id, oDr["Nombre"].ToString(), oDr["Apellido"].ToString());
+                conexion.Close();
+                return aux;
+            }
+            conexion.Close();
+            return null;
+        }
         public void Guardar(Persona p)
         {
             comando.CommandText = "INSERT INTO Persona (Nombre, Apellido) VALUES('" + p.Nombre + "', '" + p.Apellido + "')";
@@ -56,6 +70,7 @@ namespace Ejercicio61
             conexion.Open();
             comando.ExecuteNonQuery();
             conexion.Close();
+            
         }
 
 
