@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace Temporizador
+namespace _Temporizador
 {
-    public delegate bool encargadoTiempo();
+    public delegate void encargadoTiempo();
 
-    sealed class Temporizador
+    public sealed class Temporizador
     {
         Thread hilo;
         int intervalo;
@@ -22,8 +22,13 @@ namespace Temporizador
             }
             set
             {
-                if (value == true && !(hilo.IsAlive))
+                if (value == true)
+                { 
+                    if (hilo != null && hilo.IsAlive)
+                        hilo.Abort();
+                    hilo = new Thread(Corriendo);
                     hilo.Start();
+                }
                 else if (value == false && hilo.IsAlive)
                     hilo.Abort();
             }
